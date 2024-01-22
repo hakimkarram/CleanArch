@@ -1,4 +1,4 @@
-package setting
+package settings
 
 import (
 	"github.com/kataras/iris/v12"
@@ -9,22 +9,30 @@ type server struct {
 }
 
 type Server interface {
-	ServerConfiguration()
+	Configure() error
 	Start() error
+	Launch() error
 }
 
-func NewServer() Server {
+func EstablishServer() Server {
 	application := iris.New()
 	return &server{app: application}
 }
 
-// ServerConfiguration This method uses to pass another configuration to the server
-func (s server) ServerConfiguration() {
+// Configure This method uses to pass another configuration to the server
+func (s *server) Configure() error {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (s server) Start() error {
+// Start This method contains all server configurations, routers and registry
+func (s *server) Start() error {
+	_ = NewSettings(s.app)
+	return nil
+}
+
+// Launch This method ise to start run all app server dependencies and listen to the port
+func (s *server) Launch() error {
 	err := s.app.Listen(":8081")
 	if err != nil {
 		return err

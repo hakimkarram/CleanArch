@@ -5,7 +5,23 @@ import (
 	"github.com/kataras/iris/v12"
 )
 
-func Router(builder *iris.Application) {
-	customer := builder.Party("/customer")
-	customer.Get("", interfaces.GetCustomerInfoHandler)
+type router struct {
+	app   *iris.Application
+	party iris.Party
+}
+
+type Router interface {
+	launch()
+}
+
+func NewRouter(builder *iris.Application, partyName string) Router {
+	customerParty := builder.Party("/" + partyName)
+	customerRouter := &router{app: builder, party: customerParty}
+	customerRouter.launch()
+	return customerRouter
+}
+
+func (c *router) launch() {
+	c.party.Get("", interfaces.GetCustomerInfoHandler)
+	c.party.Get("/greeting", interfaces.GetCustomerGreetingHandler)
 }
