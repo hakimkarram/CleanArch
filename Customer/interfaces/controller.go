@@ -11,3 +11,10 @@ func GetCustomerInfoHandler(ctx iris.Context) {
 		return
 	}
 }
+
+func GetCustomerGreetingHandler(ctx iris.Context) {
+	err := ctx.JSON(iris.Map{"data": "Hi from Hakim"})
+	if err != nil {
+		return
+	}
+}
