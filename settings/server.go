@@ -27,11 +27,25 @@ func (s *server) Configure() error {
 
 // Start This method contains all server configurations, routers and registry
 func (s *server) Start() error {
-	_ = NewSettings(s.app)
+	Db := NewDataBase("localhost", "postgres", "shahed1986", "CleanArchDB", "5432")
+	DbLaunched, err := Db.Launch()
+	if err != nil {
+		return err
+	}
+	Settings(s.app, DbLaunched)
 	return nil
 }
 
-// Launch This method ise to start run all app server dependencies and listen to the port
+//func (s *server) LaunchDb() (*gorm.DB, error) {
+//	dsn := "host=localhost user=postgres password=shahed1986 dbname=CleanArchDB port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+//	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+//	if err != nil {
+//		return nil, err
+//	}
+//	return db, nil
+//}
+
+// Launch This method is to start run all app server dependencies and listen to the port
 func (s *server) Launch() error {
 	err := s.app.Listen(":8081")
 	if err != nil {

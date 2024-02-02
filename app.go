@@ -1,16 +1,16 @@
 package main
 
 import (
-	. "CleanArch/setting"
+	. "CleanArch/settings"
 )
 
 func RunApp() {
-	server := EstablishServer()
-	err := server.Start()
+	serv := EstablishServer()
+	err := serv.Start()
 	if err != nil {
 		return
 	}
-	err1 := server.Launch()
+	err1 := serv.Launch()
 	if err1 != nil {
 		return
 	}

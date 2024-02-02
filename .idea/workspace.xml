@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33eecb9c-59e6-40d1-941b-c499f3891fff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/setting/settings.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CleanArch.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer/infastructure/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/infastructure/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer/interfaces/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/interfaces/controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setting/router.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setting/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/setting/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/infastructure/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/infastructure/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/interfaces/useCase.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings/settings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/customer/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/infastructure/registry.go" beforeDir="false" afterPath="$PROJECT_DIR$/customer/infastructure/registry.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/infastructure/router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/interfaces/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/customer/interfaces/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/interfaces/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/customer/interfaces/repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/interfaces/usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/customer/interfaces/signature.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/customer/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/settings/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting/settings.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +36,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -39,27 +48,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;Go Build.go build CleanArch.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hakim/AlqasehApps/CleanArch&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build CleanArch.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/Users/Orbit",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="E:\Golang 2023\CleanArch\customer\infastructure" />
+      <recent name="E:\Golang 2023\CleanArch\customer" />
+      <recent name="$PROJECT_DIR$/Customer/infastructure" />
+      <recent name="$PROJECT_DIR$/Customer/app" />
+      <recent name="$PROJECT_DIR$/Customer" />
     </key>
   </component>
   <component name="RunManager">
