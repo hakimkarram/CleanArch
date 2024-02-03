@@ -1,7 +1,7 @@
 package customer
 
 import (
-	. "CleanArch/customer/interfaces"
+	. "CleanArch/customer/interface"
 	"github.com/kataras/iris/v12"
 )
 
@@ -10,17 +10,17 @@ type router struct {
 }
 
 type Router interface {
-	launch(CustomerController)
+	launch(Controller)
 }
 
-func LaunchRouter(api iris.Party, AppName string, controller CustomerController) Router {
+func LaunchRouter(api iris.Party, AppName string, controller Controller) Router {
 	apiPrefix := api.Party("/" + AppName)
 	appRouter := &router{api: apiPrefix}
 	appRouter.launch(controller)
 	return appRouter
 }
 
-func (c *router) launch(controller CustomerController) {
+func (c *router) launch(controller Controller) {
 	c.api.Get("", controller.GetCustomerInfo)
 	c.api.Get("/greeting", controller.GetCustomerInfo)
 }

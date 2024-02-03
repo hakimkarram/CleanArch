@@ -1,7 +1,7 @@
 package settings
 
 import (
-	"CleanArch/customer/infastructure"
+	"CleanArch/customer"
 	"github.com/kataras/iris/v12"
 	"gorm.io/gorm"
 )
