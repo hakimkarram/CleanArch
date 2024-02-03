@@ -11,7 +11,6 @@ func RunApp() {
 		return
 	}
 	err1 := serv.Launch()
-
 	if err1 != nil {
 		return
 	}
