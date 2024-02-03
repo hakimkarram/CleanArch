@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33eecb9c-59e6-40d1-941b-c499f3891fff" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/customer/infastructure/app.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/customer/infastructure/router.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/customer/interfaces/useCase.go" afterDir="false" />
@@ -23,6 +24,17 @@
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setting/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/settings/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setting/settings.go" beforeDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/setting/settings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CleanArch.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/infastructure/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/infastructure/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/interfaces/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/interfaces/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting/router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/setting/server.go" afterDir="false" />
+>>>>>>> 777042b1134c4f15fd838d687be340ad392e7d27
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,17 +76,25 @@
     "last_opened_file_path": "C:/Users/Orbit",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+<<<<<<< HEAD
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel"
+=======
+    "nodejs_package_manager_path": "npm"
+>>>>>>> 777042b1134c4f15fd838d687be340ad392e7d27
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="E:\Golang 2023\CleanArch\customer\infastructure" />
       <recent name="E:\Golang 2023\CleanArch\customer" />
       <recent name="$PROJECT_DIR$/Customer/infastructure" />
       <recent name="$PROJECT_DIR$/Customer/app" />
       <recent name="$PROJECT_DIR$/Customer" />
+=======
+      <recent name="$PROJECT_DIR$" />
+>>>>>>> 777042b1134c4f15fd838d687be340ad392e7d27
     </key>
   </component>
   <component name="RunManager">
