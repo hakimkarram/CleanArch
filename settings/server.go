@@ -27,7 +27,8 @@ func (s *server) Configure() error {
 
 // Start This method contains all server configurations, routers and registry
 func (s *server) Start() error {
-	Db := NewDataBase("localhost", "postgres", "shahed1986", "CleanArchDB", "5432")
+	cfg := NewConfig("config.yaml")
+	Db := NewDataBase(cfg.GetHostName(), "postgres", "shahed1986", "CleanArchDB", "5432")
 	DbLaunched, err := Db.Launch()
 	if err != nil {
 		return err

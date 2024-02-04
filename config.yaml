@@ -1,0 +1,6 @@
+database:
+  host: "localhost"
+  user: "postgres"
+  password : "shahed1986"
+  name: "CleanArchDB"
+  port : "5432"
